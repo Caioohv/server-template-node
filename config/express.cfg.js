@@ -2,6 +2,9 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+const privateRoutes = require('../routes/private')
+const publicRoutes = require('../routes/public')
+
 morgan.token('statusColor', (req, res, args) => {
   var status = (typeof res.headersSent !== 'boolean' ? Boolean(res.header) : res.headersSent)
     ? res.statusCode
@@ -23,10 +26,14 @@ module.exports = (app) => {
   app.set('view cache', false)
   app.use(bodyParser.json({limit: '20mb'}))
   app.use(bodyParser.urlencoded({extended: true}))
-
+  
   app.use(morgan('\x1b[33m:method\x1b[0m \x1b[36m:url\x1b[0m :statusColor :response-time ms'))
-
+  
   app.use(cors())
 
-  console.log('Server ok')
+  privateRoutes(app)
+  publicRoutes(app)
+
+  console.log('Server is online')
+
 }
