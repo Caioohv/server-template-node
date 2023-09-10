@@ -2,8 +2,8 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const privateRoutes = require('../routes/private')
-const publicRoutes = require('../routes/public')
+const privateRoutes = require('../config/routes/private')
+const publicRoutes = require('../config/routes/public')
 
 morgan.token('statusColor', (req, res, args) => {
   var status = (typeof res.headersSent !== 'boolean' ? Boolean(res.header) : res.headersSent)
