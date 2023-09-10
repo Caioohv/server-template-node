@@ -1,0 +1,22 @@
+{
+  "name": "server-template-node",
+  "version": "1.0.0",
+  "description": "Template de servidor para utilizar em projetos, com registro e autenticação",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caioohv/server-template-node.git"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "author": "Caioohv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caioohv/server-template-node/issues"
+  },
+  "homepage": "https://github.com/Caioohv/server-template-node#readme"
+}
