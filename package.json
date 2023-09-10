@@ -4,7 +4,8 @@
   "description": "Template de servidor para utilizar em projetos, com registro e autenticação",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
