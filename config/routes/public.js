@@ -4,8 +4,8 @@ module.exports = (app) => {
 
   //todo adicionar rotas sem autenticação aqui
 
-  app.get('/', (req, res) => {
-    res.status('200').send("running")
+  app.get('/healthcheck', (req, res) => {
+    res.status(200).send("running")
   })
   
   console.log('Public routes ok')
